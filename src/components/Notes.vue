@@ -1,15 +1,5 @@
 <template>
     <div>
-        <h3>Notes</h3>
-        <div class="legend">
-            <span>Double tap to mark as complete</span>
-            <span>
-                <span class="completed-box"></span> Completed
-            </span>
-            <span>
-                <span class="incompleted-box"></span> Incompleted
-            </span>
-        </div>
         <div class="notes">
             <div @dblclick="onDblClick(note)"
             v-for="note in allNotes"
@@ -52,12 +42,12 @@
           -moz-user-select: none; 
            -khtml-user-select: none; 
             -webkit-user-select: none; 
-             -webkit-touch-callout: none;   
+             -webkit-touch-callout: none; 
     }
     
     .notes {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 3fr);
         grid-gap: 1rem;
     }
 
@@ -71,42 +61,32 @@
         border-radius: 5px;
     }
 
+    .note > p {
+        font-size: 20px;
+    }
+
     i {
         right: 10px;
         bottom: 10px;
         color: #FFF;
         cursor: pointer;
         position: absolute;
+        transition: color 250ms;
     }
-
-    .legend {
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 1rem;
-    }
-
-    .incompleted-box {
-        width: 10px;
-        height: 10px;
-        background: #41B883;
-        display: inline-block;
-    }
-
-    .completed-box {
-        width: 10px;
-        height: 10px;
-        background: #35495E;
-        display: inline-block;
+    
+    i:hover {
+        color: #E71111;
     }
 
     .is-complete {
         color: #FFF;
         background: #35495E;
+        transition: background 1s;
     }
 
     @media (max-width: 500px) {
         .todos {
-            grid-template-columns: 1fr;
+            grid-template-columns: 2fr;
         }
     }
 </style>
