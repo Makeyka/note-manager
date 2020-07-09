@@ -14,9 +14,10 @@
             <div @dblclick="onDblClick(note)"
             v-for="note in allNotes"
             v-bind:key="note.id"
+            v-bind:id="note.id"
             class="note" 
             v-bind:class="{'is-complete':note.completed}">
-                {{ note.title }}
+                <p> {{ note.title }} </p>
                 <i @click="deleteNote(note.id)" class="fas fa-trash-alt"></i>
             </div>
         </div>
@@ -45,6 +46,15 @@
 </script>
 
 <style scoped>
+    div, span, p { 
+        user-select: none;
+         -ms-user-select: none;
+          -moz-user-select: none; 
+           -khtml-user-select: none; 
+            -webkit-user-select: none; 
+             -webkit-touch-callout: none;   
+    }
+    
     .notes {
         display: grid;
         grid-template-columns: repeat(3, 1fr);

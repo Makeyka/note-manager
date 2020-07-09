@@ -3,7 +3,8 @@
         <h3>Add Note</h3>
         <div class="add">
             <form @submit="onSubmit">
-                <input type="text" v-model="title" placeholder="Add Note..">
+                <input type="text" v-model="title" placeholder="Add new note.." required>
+                <span style="width:5px;"></span>
                 <input type="submit" value="Submit">
             </form>
         </div>
@@ -40,6 +41,7 @@
         outline: 0;
         padding: 10px;
         border: 1px solid #41B883;
+        border-radius: 5px;
     }
 
     input[type="submit"] {
@@ -48,5 +50,6 @@
         cursor: pointer;
         background: #41B883;
         border: 1px solid #41B883;
+        border-radius: 5px;
     }
 </style>

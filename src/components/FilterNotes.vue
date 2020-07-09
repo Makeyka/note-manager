@@ -1,6 +1,6 @@
 <template>
     <div>
-        Filter Notes:
+        Filter:
         <select @change="filterNotes($event)">
             <option value="200">200</option>
             <option value="100">100</option>
