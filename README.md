@@ -1,4 +1,4 @@
-# note-manager
+# [Note Manager](https://note-manager.netlify.app)
 
 ## Project setup
 ```
