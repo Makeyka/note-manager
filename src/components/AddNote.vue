@@ -3,7 +3,7 @@
         <h1>Note Manager</h1>
         <div class="add">
             <form @submit="onSubmit">
-                <input id="add-note" type="text" v-model="title" placeholder="Type your note.." required>
+                <input id="add-note" type="text" v-model="title" placeholder="Type your note..." required>
                 <span style="width:5px;"></span>
                 <input @click="clear" type="submit" id="submit" value="ADD NOTE">
             </form>
@@ -37,6 +37,16 @@
 </script>
 
 <style scoped>
+    h1::selection {
+        color: #FFF;
+        background: #41B883;
+    }
+
+    input::selection {
+        color: #FFF;
+        background: #41B883;
+    }
+
     h1 {
         color: #35495E;
     }
