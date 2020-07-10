@@ -59,6 +59,12 @@
         background: #41B883;
         border: 1px solid #CCC;
         border-radius: 5px;
+        animation: fadeIn 1.5s;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
     }
 
     .note > p {
