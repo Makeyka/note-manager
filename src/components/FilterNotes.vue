@@ -1,14 +1,16 @@
 <template>
     <div>
-        Filter Results:
-        <select @change="filterNotes($event)">
-            <option value="200">200</option>
-            <option value="100">100</option>
-            <option value="50">50</option>
-            <option value="25">25</option>
-            <option value="10">10</option>
-            <option value="5">5</option>
-        </select>
+        <div id="filter">
+            Filter Results:
+            <select @change="filterNotes($event)">
+                <option value="200">200</option>
+                <option value="100">100</option>
+                <option value="50">50</option>
+                <option value="25">25</option>
+                <option value="10">10</option>
+                <option value="5">5</option>
+            </select>
+        </div>
         <div class="legend">
             <span>
                 <span class="completed-box"></span> Done
@@ -34,6 +36,7 @@
         padding: 5px;
         margin-top: 20px;
         border: 1px solid #41B883;
+        border-radius: 5px;
     }
 
     .legend {
@@ -58,5 +61,13 @@
         height: 10px;
         background: #35495E;
         display: inline-block;
+    }
+
+    @media (max-width: 420px) {
+        #filter {
+            position: absolute;
+            margin-top: -70px;
+            margin-left: 105px;
+        }
     }
 </style>

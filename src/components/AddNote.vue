@@ -5,7 +5,7 @@
             <form @submit="onSubmit">
                 <input id="add-note" type="text" v-model="title" placeholder="Type your note.." required>
                 <span style="width:5px;"></span>
-                <input @click="clear" type="submit" value="ADD NOTE">
+                <input @click="clear" type="submit" id="submit" value="ADD NOTE">
             </form>
         </div>
     </div>
@@ -68,5 +68,18 @@
     input[type="submit"]:hover {
         background: #35495E;
         transition: background 250ms;
+    }
+
+    
+    @media (max-width: 420px) {
+        #add-note {
+            margin-bottom: 50px;
+        }
+
+        #submit {
+            position: absolute;
+            margin: 55px 0 50px 0;
+            padding: 10px;
+        }
     }
 </style>

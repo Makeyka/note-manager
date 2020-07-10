@@ -84,8 +84,8 @@
         transition: background 1s;
     }
 
-    @media (max-width: 500px) {
-        .todos {
+    @media (max-width: 600px) {
+        .notes {
             grid-template-columns: 2fr;
         }
     }
