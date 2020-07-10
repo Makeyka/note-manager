@@ -1,7 +1,9 @@
 <template>
     <div>
         <div id="filter">
-            Filter Results:
+            <span style="padding-right:5px;">
+                Filter Results:
+            </span>
             <select @change="filterNotes($event)">
                 <option value="200">200</option>
                 <option value="100">100</option>
@@ -61,6 +63,11 @@
         height: 10px;
         background: #35495E;
         display: inline-block;
+    }
+
+    span::selection {
+        color: #FFF;
+        background: #41B883;
     }
 
     @media (max-width: 420px) {
