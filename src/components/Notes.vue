@@ -66,6 +66,10 @@
         from { opacity: 0; }
         to { opacity: 1; }
     }
+    
+    .note::selection {
+        background: transparent;
+    }
 
     .note > p {
         font-size: 20px;
